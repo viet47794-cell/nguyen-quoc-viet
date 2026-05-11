@@ -8,74 +8,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
+    <div class="bg-glow"></div>
+
     <nav>
         <div class="logo">VIET<span>.GQ</span></div>
         <div class="nav-links">
-            <a href="#about">Giới thiệu</a>
+            <a href="#about">Về tôi</a>
             <a href="#projects">Dự án</a>
+            <a href="#hobbies">Đam mê</a>
             <button id="theme-toggle">🌓</button>
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <span class="tag">Gia Dinh University - IT & Graphic Design</span>
-            <h1>Sáng tạo bằng <br><span class="highlight">Logic & Màu sắc</span></h1>
-            <p>Tôi là sinh viên năm 2 tại GDU. Tôi kết hợp tư duy lập trình và nhãn quan thiết kế đồ họa để tạo ra những sản phẩm số ấn tượng.</p>
+            <span class="tag">Gia Dinh University (GDU)</span>
+            <h1 class="gradient-text">Sáng tạo bằng <br>Logic & Màu sắc</h1>
+            <p>Xin chào, tôi là Nguyễn Quốc Việt. Sự giao thoa giữa tư duy Lập trình và nhãn quan Thiết kế Đồ họa giúp tôi tạo ra những trải nghiệm số khác biệt.</p>
             <div class="hero-btns">
-                <a href="#projects" class="btn-p">Xem dự án</a>
-                <a href="mailto:viet47794@gmail.com" class="btn-s">Liên hệ</a>
+                <a href="#projects" class="btn-p">Khám phá ngay</a>
             </div>
         </div>
     </header>
 
     <section id="about" class="container">
-        <h2 class="section-title">Về bản thân</h2>
+        <h2 class="section-title">Hồ sơ Năng lực</h2>
         <div class="about-grid">
-            <div class="about-text">
-                <p>Với nền tảng học song ngành, tôi không chỉ dừng lại ở việc thiết kế giao diện (UI) mà còn có khả năng hiện thực hóa chúng thông qua mã nguồn (Frontend). Tôi đam mê nhiếp ảnh và văn hóa Anime, điều này giúp tôi có cái nhìn đa chiều về màu sắc và bố cục.</p>
-            </div>
-            <div class="skills-box">
+            <div class="skills-box glass-card">
+                <h3 style="margin-bottom: 20px; color: var(--accent);">Kỹ năng chuyên môn</h3>
                 <div class="skill-item"><span>Graphic Design (Ps, Ai, Figma)</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
-                <div class="skill-item"><span>Frontend (HTML, CSS, JS)</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
-                <div class="skill-item"><span>Photography & Lighting</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+                <div class="skill-item"><span>Frontend Dev (HTML, CSS, JS)</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title">Dự án tiêu biểu</h2>
-        <div class="project-grid">
-            <div class="card">
-                <div class="card-tag">Branding</div>
-                <h3>Visual Identity 2026</h3>
-                <p>Hệ thống nhận diện thương hiệu cá nhân kết hợp phong cách Cyberpunk.</p>
-            </div>
-            <div class="card">
-                <div class="card-tag">Web Dev</div>
-                <h3>Responsive Portfolio</h3>
-                <p>Website cá nhân tối ưu trên mọi thiết bị, tích hợp chế độ Dark/Light mode.</p>
-            </div>
-            <div class="card">
-                <div class="card-tag">Art</div>
-                <h3>Photography Collection</h3>
-                <p>Bộ ảnh chân dung thực hiện bằng Canon 1200D với ống kính Tamron 18-200mm.</p>
+            <div class="text-box glass-card">
+                <h3 style="margin-bottom: 20px; color: var(--accent);">Hành trình</h3>
+                <p>Tôi không ngừng mở rộng giới hạn của bản thân. Từ những khóa học chuyên sâu về Computer Vision, Advertising Technology đến việc trải nghiệm môi trường thực tế tại kho Shopee để rèn luyện tính kỷ luật. Mọi mảnh ghép đều tạo nên phong cách thiết kế của tôi ngày hôm nay.</p>
             </div>
         </div>
     </section>
 
     <section id="hobbies" class="container">
-        <h2 class="section-title">Sở thích & Đam mê</h2>
-        <div class="hobbies-list">
-            <span class="hobby-tag">Rhythm Games (maimai DX)</span>
-            <span class="hobby-tag">Anime & Miku Figure</span>
-            <span class="hobby-tag">Street Photography</span>
-            <span class="hobby-tag">Football</span>
+        <h2 class="section-title">Góc cá nhân</h2>
+        <div class="project-grid">
+            <div class="glass-card card-hover">
+                <div class="icon">📷</div>
+                <h3>Nhiếp ảnh (Photography)</h3>
+                <p>Bắt trọn khoảnh khắc qua ống kính Canon EOS 1200D & Tamron 18-200mm Non-VC. Đặc biệt yêu thích chụp chân dung và tĩnh vật.</p>
+            </div>
+            <div class="glass-card card-hover">
+                <div class="icon">🎵</div>
+                <h3>Rhythm Games</h3>
+                <p>Rèn luyện sự tập trung và phản xạ nhịp độ cao. Tự hào với mức rating 11,500 (144 credits) trong maimai DX.</p>
+            </div>
+            <div class="glass-card card-hover">
+                <div class="icon">✨</div>
+                <h3>Văn hóa 2D</h3>
+                <p>Nguồn cảm hứng thiết kế bất tận từ Anime và âm nhạc Vocaloid. Thường xuyên cập nhật xu hướng tại các lễ hội như Hobby Horizon.</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Nguyễn Quốc Việt. Built with AI Assistance.</p>
+        <p>Kết nối: <a href="mailto:viet@example.com" style="color: var(--accent); text-decoration: none;">viet@example.com</a></p>
+        <p style="opacity: 0.5; margin-top: 10px;">© 2026 Nguyễn Quốc Việt. Chuyến đi Hà Nội sắp tới sẽ là nguồn cảm hứng mới!</p>
     </footer>
 
     <script src="script.js"></script>
