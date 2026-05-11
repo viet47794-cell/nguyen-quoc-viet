@@ -3,100 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Nguyen Quoc Viet - GDU Creative</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Nguyen Quoc Viet | IT & Graphic Design Creative Portolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
-    <div class="bg-glow"></div>
+    <div class="bg-pattern"></div>
 
-    <nav class="fixed-top">
-        <div class="header-container">
-            <div class="header-left">
-                <div class="name-block">
-                    <div class="logo">NGUYỄN QUỐC VIỆT</div>
-                    <div class="title">IT & GRAPHIC DESIGN CREATIVE</div>
+    <nav class="fixed-top-bar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo-block">
+                    <div class="brand-name">NGUYỄN QUỐC VIỆT</div>
+                    <div class="brand-title">IT & GRAPHIC DESIGN CREATIVE</div>
                 </div>
             </div>
-            <div class="header-right">
-                <div class="menu-block">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
+            <div class="nav-right">
+                <div class="links-block">
+                    <a href="#about">Về Tôi</a>
+                    <a href="#portfolio">Dự Án</a>
+                    <a href="#skills">Kỹ Năng</a>
+                    <a href="#contact">Liên Hệ</a>
                 </div>
-                <button id="theme-toggle">☀️</button>
+                <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="gradient-text clamp-large">NGUYỄN <br>QUỐC VIỆT</h1>
-            <p>IT & Graphic Design Student at Gia Dinh University (GDU). <br>Sáng tạo bằng <span class="highlight">Logic & Màu sắc</span>. Tối ưu hóa trải nghiệm số bằng tư duy song ngành.</p>
-            <div class="tags-row">
-                <span class="tag-chip">GRAPHIC DESIGN</span>
-                <span class="tag-chip">WEB DEV (FRONTEND)</span>
-                <span class="tag-chip">CREATIVE LOGIC</span>
+    <header class="hero-section">
+        <div class="hero-box">
+            <span class="uni-tag">Gia Dinh University (GDU) Student</span>
+            <h1 class="main-heading">Giao Thoa Giữa <br>Logic & Thẩm Mỹ</h1>
+            <p class="hero-desc">Tôi là sinh viên song ngành IT & Thiết kế Đồ họa. Tôi không chỉ viết code mà còn thổi hồn vào giao diện, tạo ra những trải nghiệm số tối ưu và đẹp mắt.</p>
+            <div class="action-btns">
+                <a href="#portfolio" class="btn-primary">Xem Dự Án</a>
+                <a href="mailto:viet47794@gmail.com" class="btn-secondary">Liên Hệ</a>
             </div>
         </div>
     </header>
 
-    <section id="stats" class="container stats-section">
-        <div class="project-grid stats-grid">
-            <div class="glass-card stat-card">
-                <div class="stat-num glow-teal">2</div>
-                <div class="stat-desc">Completed Core <br>Portfolio Projects</div>
+    <section id="about" class="about-creative container">
+        <div class="about-layout glass-panel">
+            <div class="about-photo-frame">
+                <div class="photo-placeholder">PHOTO</div>
             </div>
-            <div class="glass-card stat-card">
-                <div class="stat-num glow-yellow">10+</div>
-                <div class="stat-desc">Major Implemented <br>Design Concepts</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title">Dự án tiêu biểu</h2>
-        <div class="project-grid detail-grid">
-            <div class="glass-card card-hover detail-card">
-                <div class="icon">🤖</div>
-                <h3>Visual Branding AI</h3>
-                <p>Thống nhất hệ thống nhận diện thương hiệu sử dụng Midjourney và Adobe Photoshop. Đậm chất Cyberpunk.</p>
-            </div>
-            <div class="glass-card card-hover detail-card">
-                <div class="icon">🌐</div>
-                <h3>Responsive Web Portfolio</h3>
-                <p>Website cá nhân tối ưu hóa trên mọi thiết bị. Giao diện Neon Cyberpunk mượt mà, siêu nhẹ.</p>
+            <div class="about-content">
+                <h2 class="creative-title">Câu Chuyện Của Tôi</h2>
+                <p>Nền tảng IT giúp tôi hiểu rõ "cỗ máy" vận hành bên dưới, trong khi Graphic Design cho tôi nhãn quan để làm cho "cỗ máy" đó giao tiếp tốt hơn với người dùng. Sự kết hợp này giúp tôi giải quyết vấn đề bằng cả cái đầu lạnh và trái tim ấm nóng.</p>
+                <div class="hobbies-minimal">
+                    <span>📷 Nhiếp ảnh (Canon 1200D)</span>
+                    <span>🎵 Rhythm Games (maimai DX 11k5)</span>
+                    <span>✨ Anime Culture</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="container">
-        <h2 class="section-title">Kỹ năng chuyên môn</h2>
-        <div class="skills-box glass-card">
-            <div class="skill-item"><span>Graphic Design (Ps, Ai, Figma)</span><div class="bar"><div class="fill filled-ps" style="width: 90%;"></div></div></div>
-            <div class="skill-item"><span>Frontend Dev (HTML, CSS, JS)</span><div class="bar"><div class="fill filled-fe" style="width: 80%;"></div></div></div>
-            <div class="skill-item"><span>Photography (Canon EOS 1200D, Tamron 18-200mm)</span><div class="bar"><div class="fill filled-photo" style="width: 75%;"></div></div></div>
-            <div class="skill-item"><span>Rhythm Game Reflex (maimai DX - Rating 11,500)</span><div class="bar"><div class="fill filled-game" style="width: 85%;"></div></div></div>
+    <section id="portfolio" class="projects-editorial container">
+        <h2 class="creative-title">Các Dự Án Tâm Huyết</h2>
+        <div class="project-list">
+            <div class="project-item glass-card-minimal hover-lift">
+                <div class="proj-icon">🎨</div>
+                <div class="proj-info">
+                    <h3>Hệ Thống Nhận Diện Brand AI</h3>
+                    <p>Ứng dụng AI tổng hợp và tối ưu thương hiệu cá nhân phong cách Modern Tech.</p>
+                </div>
+            </div>
+            <div class="project-item glass-card-minimal hover-lift">
+                <div class="proj-icon">💻</div>
+                <div class="proj-info">
+                    <h3>Responsive Portfolio Website</h3>
+                    <p>Giao diện hiện đại, tối ưu SEO và trải nghiệm người dùng trên mọi thiết bị.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <div class="contact-card glass-card">
-            <h2>Contact</h2>
-            <p>Interested in collaborating or learning more? Send a message and let's connect. (Đặc biệt nếu ông thầy chấm 10 điểm!)</p>
-            <div class="btn-row">
-                <a href="mailto:viet47794@gmail.com" class="btn-p btn-blue">Get in touch</a>
+    <section id="skills" class="skills-showcase container">
+        <h2 class="creative-title">Vũ Khí Chuyên Môn</h2>
+        <div class="skills-grid">
+            <div class="skill-category glass-panel">
+                <h3>Thiết Kế</h3>
+                <p>Photoshop, Illustrator, Figma, UI/UX Design</p>
+                <div class="bar-minimal"><div class="fill-minimal accent-bar" style="width: 90%;"></div></div>
             </div>
+            <div class="skill-category glass-panel">
+                <h3>Lập Trình</h3>
+                <p>HTML5, CSS3, JavaScript, Web Responsive</p>
+                <div class="bar-minimal"><div class="fill-minimal accent-bar" style="width: 80%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-cta container">
+        <div class="cta-box glass-card accent-border">
+            <h2>Sẵn Sàng Hợp Tác?</h2>
+            <p>Nếu bạn cần một giải pháp kết hợp giữa kỹ thuật và thẩm mỹ, hãy để lại lời nhắn.</p>
+            <a href="mailto:viet47794@gmail.com" class="btn-primary large-btn">Gửi Email</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <p class="footer-left">© 2026 Nguyễn Quốc Việt. Chuyến đi Hà Nội sắp tới sẽ là nguồn cảm hứng mới!</p>
-            <div class="footer-right">
-                <a href="mailto:viet47794@gmail.com">Email</a>
-                <a href="#projects">Projects</a>
+        <div class="footer-minimal container">
+            <p class="foot-left">© 2026 Nguyễn Quốc Việt. Made with passion & AI.</p>
+            <div class="foot-right">
+                <a href="#about">About</a>
+                <a href="#portfolio">Projects</a>
+                <a href="mailto:viet47794@gmail.com">Contact</a>
             </div>
         </div>
     </footer>
