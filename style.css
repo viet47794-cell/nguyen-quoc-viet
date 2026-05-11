@@ -1,42 +1,95 @@
 :root {
-    --bg-color: #f7f9fc;
+    --bg-color: #f8fafc;
     --text-main: #0f172a;
     --text-muted: #475569;
-    --nav-text: #64748b;
+    --nav-bg: rgba(248, 250, 252, 0.9);
     --card-bg: #ffffff;
+    --bubble-bg: #e2e8f0;
+    --bubble-text: #0284c7;
+    --btn-blue: #0284c7;
     --border-color: #e2e8f0;
-    --accent: #0088cc;
+    --hover-bg: #f1f5f9;
 }
 
 [data-theme="dark"] {
-    --bg-color: #1e242c;
+    --bg-color: #0f172a;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --card-bg: #272d36;
-    --border-color: #333d4a;
+    --nav-bg: rgba(15, 23, 42, 0.9);
+    --card-bg: #1e293b;
+    --bubble-bg: #334155;
+    --bubble-text: #38bdf8;
+    --btn-blue: #0ea5e9;
+    --border-color: #334155;
+    --hover-bg: #273548;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: 0.3s; }
+/* Kích hoạt trượt mượt mà khi bấm menu */
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: background-color 0.3s; }
 
-/* Cấu trúc thanh Nav của thầy */
-nav { padding: 40px 8%; max-width: 900px; margin: 0 auto; }
-.nav-brand { margin-bottom: 20px; }
-.name { font-weight: 800; font-size: 1.2rem; letter-spacing: 2px; color: var(--nav-text); }
-.nav-links { display: flex; gap: 20px; margin-bottom: 20px; }
-.nav-links a { text-decoration: none; color: var(--nav-text); font-weight: 600; }
-.theme-btn { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border-color); background: transparent; cursor: pointer; color: var(--text-main); }
+/* Menu dính trên đầu (Sticky Nav) */
+.sticky-nav { position: sticky; top: 0; z-index: 100; background-color: var(--nav-bg); backdrop-filter: blur(10px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 5%; border-bottom: 1px solid var(--border-color); transition: background-color 0.3s; }
+.nav-brand { display: flex; flex-direction: column; }
+.nav-brand .name { font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; color: var(--text-main); text-transform: uppercase; }
+.nav-brand .title { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; font-weight: 600; padding: 5px 10px; border-radius: 8px; transition: 0.2s; }
+.nav-links a:hover { color: var(--text-main); background-color: var(--hover-bg); }
+.theme-btn { width: 40px; height: 40px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; font-size: 1.2rem; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
+.theme-btn:hover { background-color: var(--hover-bg); transform: scale(1.05); }
 
-/* Accordion Skills (Cái ông muốn bấm bấm) */
-.skill-section { max-width: 800px; margin: 40px auto; padding: 0 5%; }
-.skill-accordion { background: var(--card-bg); border-radius: 12px; margin-bottom: 10px; border: 1px solid var(--border-color); overflow: hidden; }
-.accordion-btn { width: 100%; padding: 20px; background: none; border: none; text-align: left; font-weight: 700; font-size: 1.1rem; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; }
-.accordion-btn::after { content: '+'; color: var(--accent); }
-.accordion-btn.active::after { content: '−'; }
+/* Bố cục chính */
+.main-container { max-width: 800px; margin: 0 auto; padding: 0 5%; }
+.section { padding-top: 60px; padding-bottom: 40px; }
+.section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; display: inline-block; }
 
-.accordion-content { max-height: 0; overflow: hidden; transition: 0.3s ease-out; padding: 0 20px; }
-.accordion-content.show { max-height: 200px; padding: 0 20px 20px; border-top: 1px solid var(--border-color); }
+/* Hero */
+.hero-name { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 15px; letter-spacing: -1px; }
+.hero-desc { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6; }
+.tags-bubble { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+.bubble { background-color: var(--bubble-bg); color: var(--bubble-text); padding: 8px 16px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
 
-/* Contact Box chuẩn form thầy */
-.contact-box { max-width: 800px; margin: 60px auto; background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border-color); text-align: center; }
-.btn-blue { display: block; background: var(--accent); color: white; text-decoration: none; padding: 15px; border-radius: 30px; margin-top: 20px; font-weight: 700; }
+/* Stats */
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stat-card { background-color: var(--card-bg); border-radius: 16px; padding: 30px 20px; border: 1px solid var(--border-color); transition: transform 0.3s; }
+.stat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.stat-card h2 { font-size: 3rem; font-weight: 700; margin-bottom: 5px; line-height: 1; color: var(--text-main); }
+.stat-card p { font-size: 1rem; color: var(--text-muted); font-weight: 500; }
+
+/* Projects */
+.project-item { background-color: var(--card-bg); padding: 25px; border-radius: 16px; margin-bottom: 20px; border: 1px solid var(--border-color); transition: 0.3s; }
+.project-item:hover { border-color: var(--btn-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.project-item h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.project-item p { color: var(--text-muted); font-size: 1.05rem; }
+
+/* Kỹ Năng Accordion - Sử dụng được */
+.skill-accordion { background-color: var(--card-bg); border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); overflow: hidden; }
+.accordion-btn { background-color: transparent; color: var(--text-main); cursor: pointer; padding: 18px 20px; width: 100%; text-align: left; border: none; outline: none; transition: background-color 0.2s; font-size: 1.05rem; font-weight: 600; font-family: 'Inter', sans-serif; display: flex; justify-content: space-between; align-items: center; }
+.accordion-btn:hover { background-color: var(--hover-bg); }
+.accordion-btn::after { content: '+'; font-size: 1.5rem; color: var(--btn-blue); transition: transform 0.3s; }
+.accordion-btn.active::after { content: '−'; transform: rotate(180deg); }
+.accordion-content { padding: 0 20px; background-color: var(--card-bg); max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; }
+.accordion-content.show { padding: 0 20px 20px; max-height: 250px; }
+.accordion-content p { color: var(--text-muted); font-size: 1rem; margin: 0; border-top: 1px solid var(--border-color); padding-top: 15px; }
+
+/* Contact */
+.contact-box { background-color: var(--card-bg); border-radius: 20px; padding: 40px; text-align: center; border: 1px solid var(--border-color); }
+.contact-box h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; text-align: left; }
+.contact-box p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 25px; text-align: left; }
+.btn-blue { display: inline-block; width: 100%; background-color: var(--btn-blue); color: #ffffff; text-decoration: none; padding: 16px 0; border-radius: 12px; font-weight: 600; font-size: 1.05rem; transition: background-color 0.2s, transform 0.2s; }
+.btn-blue:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* Footer */
+footer { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); font-size: 0.95rem; color: var(--text-muted); flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+.footer-right { display: flex; gap: 20px; }
+.footer-right a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: 0.2s; }
+.footer-right a:hover { color: var(--text-main); }
+
+@media (max-width: 600px) {
+    .sticky-nav { flex-direction: column; gap: 15px; }
+    .nav-brand { align-items: center; text-align: center; }
+    .theme-btn { position: absolute; right: 5%; top: 15px; }
+    .stats-grid { grid-template-columns: 1fr; }
+}
