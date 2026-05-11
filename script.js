@@ -1,4 +1,4 @@
-// 1. CHỨC NĂNG ĐỔI MÀU GIAO DIỆN SÁNG/TỐI (THEME TOGGLE)
+// 1. CHỨC NĂNG ĐỔI MÀU GIAO DIỆN SÁNG/TỐI
 const btn = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -7,7 +7,7 @@ btn.addEventListener('click', () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     body.setAttribute('data-theme', newTheme);
     
-    // Đổi icon mặt trời / mặt trăng cho ngầu
+    // Đổi icon
     btn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
 });
 
@@ -16,17 +16,16 @@ const accordions = document.querySelectorAll('.accordion-btn');
 
 accordions.forEach(acc => {
     acc.addEventListener('click', function() {
-        // Toggle class 'active' để đổi dấu + thành -
+        // Thay đổi class active để đổi dấu + thành -
         this.classList.toggle('active');
         
-        // Lấy phần tử nội dung ngay bên dưới nút bấm
+        // Lấy phần nội dung ngay bên dưới
         const content = this.nextElementSibling;
         
-        // Toggle class 'show' để hiện/ẩn nội dung với hiệu ứng mượt
+        // Đóng/Mở mượt mà
         if (content.classList.contains('show')) {
             content.classList.remove('show');
         } else {
-            // Đóng các tab khác lại nếu muốn (Tùy chọn, hiện tại đang để mở nhiều tab cùng lúc được)
             content.classList.add('show');
         }
     });
