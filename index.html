@@ -3,117 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Quoc Viet | IT & Graphic Design Creative Portolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Nguyễn Quốc Việt | Creative Technologist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
-    <div class="bg-pattern"></div>
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
 
-    <nav class="fixed-top-bar">
-        <div class="nav-container">
+    <nav class="fixed-nav-bar blur-nav">
+        <div class="nav-inside">
             <div class="nav-left">
-                <div class="logo-block">
+                <div class="brand-group">
                     <div class="brand-name">NGUYỄN QUỐC VIỆT</div>
-                    <div class="brand-title">IT & GRAPHIC DESIGN CREATIVE</div>
+                    <div class="brand-title">IT & DESIGN CREATIVE</div>
                 </div>
             </div>
             <div class="nav-right">
-                <div class="links-block">
-                    <a href="#about">Về Tôi</a>
-                    <a href="#portfolio">Dự Án</a>
-                    <a href="#skills">Kỹ Năng</a>
-                    <a href="#contact">Liên Hệ</a>
+                <div class="nav-links">
+                    <a href="#hero">Start</a>
+                    <a href="#bento">Bento</a>
+                    <a href="#journey">Journey</a>
+                    <a href="#contact">Connect</a>
                 </div>
-                <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+                <button id="theme-toggle">🌗</button>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="hero-box">
-            <span class="uni-tag">Gia Dinh University (GDU) Student</span>
-            <h1 class="main-heading">Giao Thoa Giữa <br>Logic & Thẩm Mỹ</h1>
-            <p class="hero-desc">Tôi là sinh viên song ngành IT & Thiết kế Đồ họa. Tôi không chỉ viết code mà còn thổi hồn vào giao diện, tạo ra những trải nghiệm số tối ưu và đẹp mắt.</p>
-            <div class="action-btns">
-                <a href="#portfolio" class="btn-primary">Xem Dự Án</a>
-                <a href="mailto:viet47794@gmail.com" class="btn-secondary">Liên Hệ</a>
+    <header id="hero" class="hero-complex">
+        <div class="container hero-wrapper">
+            <div class="hero-text-content">
+                <div class="badge-glitch">Sinh viên GDU Năm 2</div>
+                <h1 class="title-massive">Logic<br><span class="text-gradient">Thẩm Mỹ.</span></h1>
+                <p>Giao thoa giữa những dòng code khô khan và thế giới màu sắc vô tận. Khai thác sức mạnh của Computer Vision và Design Principles để kiến tạo trải nghiệm số.</p>
+                <div class="btn-group-complex">
+                    <a href="#bento" class="btn-neo">Khám Phá Grid</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-element el-1">UI/UX</div>
+                <div class="floating-element el-2">Frontend</div>
+                <div class="floating-element el-3">Photography</div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="about-creative container">
-        <div class="about-layout glass-panel">
-            <div class="about-photo-frame">
-                <div class="photo-placeholder">PHOTO</div>
-            </div>
-            <div class="about-content">
-                <h2 class="creative-title">Câu Chuyện Của Tôi</h2>
-                <p>Nền tảng IT giúp tôi hiểu rõ "cỗ máy" vận hành bên dưới, trong khi Graphic Design cho tôi nhãn quan để làm cho "cỗ máy" đó giao tiếp tốt hơn với người dùng. Sự kết hợp này giúp tôi giải quyết vấn đề bằng cả cái đầu lạnh và trái tim ấm nóng.</p>
-                <div class="hobbies-minimal">
-                    <span>📷 Nhiếp ảnh (Canon 1200D)</span>
-                    <span>🎵 Rhythm Games (maimai DX 11k5)</span>
-                    <span>✨ Anime Culture</span>
+    <section id="bento" class="container bento-section">
+        <h2 class="section-title">Hồ Sơ Năng Lực <span>(Bento UI)</span></h2>
+        <div class="bento-grid">
+            <div class="bento-item span-row-2 glass-complex">
+                <div class="bento-icon">🎨</div>
+                <h3>Graphic Design</h3>
+                <p>Làm chủ Adobe Photoshop, Illustrator, Figma và ibisPaint X. Tư duy thiết kế dựa trên nguyên lý Visual Design và Advertising Technology.</p>
+                <div class="progress-ring-container">
+                    <div class="tech-tag">Ps</div><div class="tech-tag">Ai</div><div class="tech-tag">Figma</div>
                 </div>
             </div>
+            
+            <div class="bento-item span-col-2 glass-complex highlight-border">
+                <div class="bento-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Xây dựng giao diện Responsive, tối ưu hóa cấu trúc HTML/CSS và xử lý logic với JavaScript (VS Code environment).</p>
+            </div>
+
+            <div class="bento-item glass-complex">
+                <div class="bento-icon">📸</div>
+                <h3>Nhiếp Ảnh</h3>
+                <p>Ghi lại chân dung & tĩnh vật qua ống kính Canon EOS 1200D cùng Tamron 18-200mm Non-VC.</p>
+            </div>
+
+            <div class="bento-item glass-complex accent-bg">
+                <div class="bento-icon">🕹️</div>
+                <h3>Rhythm Reflex</h3>
+                <p>maimai DX Rating: 11,500.<br>Tích lũy 144 credits.<br>Rèn luyện độ phản xạ và tư duy nhịp độ cao.</p>
+            </div>
         </div>
     </section>
 
-    <section id="portfolio" class="projects-editorial container">
-        <h2 class="creative-title">Các Dự Án Tâm Huyết</h2>
-        <div class="project-list">
-            <div class="project-item glass-card-minimal hover-lift">
-                <div class="proj-icon">🎨</div>
-                <div class="proj-info">
-                    <h3>Hệ Thống Nhận Diện Brand AI</h3>
-                    <p>Ứng dụng AI tổng hợp và tối ưu thương hiệu cá nhân phong cách Modern Tech.</p>
+    <section id="journey" class="container timeline-section">
+        <h2 class="section-title">Hành Trình <span>(Timeline)</span></h2>
+        <div class="timeline-container">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-complex">
+                    <span class="time-badge">Năm 2 - Hiện tại</span>
+                    <h3>Đại học Gia Định (GDU)</h3>
+                    <p>Theo đuổi song ngành IT và Graphic Design. Mỗi ngày vượt hành trình 30km đến trường để chắt lọc những kiến thức chuyên sâu nhất.</p>
                 </div>
             </div>
-            <div class="project-item glass-card-minimal hover-lift">
-                <div class="proj-icon">💻</div>
-                <div class="proj-info">
-                    <h3>Responsive Portfolio Website</h3>
-                    <p>Giao diện hiện đại, tối ưu SEO và trải nghiệm người dùng trên mọi thiết bị.</p>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-complex">
+                    <span class="time-badge">Tháng 5/2026</span>
+                    <h3>Môi Trường Kỷ Luật</h3>
+                    <p>Trải nghiệm làm việc tại kho Shopee. Một bước đệm thực tế để rèn luyện sức bền, kỷ luật và khả năng vận hành hệ thống.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="skills" class="skills-showcase container">
-        <h2 class="creative-title">Vũ Khí Chuyên Môn</h2>
-        <div class="skills-grid">
-            <div class="skill-category glass-panel">
-                <h3>Thiết Kế</h3>
-                <p>Photoshop, Illustrator, Figma, UI/UX Design</p>
-                <div class="bar-minimal"><div class="fill-minimal accent-bar" style="width: 90%;"></div></div>
+            <div class="timeline-item">
+                <div class="timeline-dot pulse-dot"></div>
+                <div class="timeline-content glass-complex border-glow">
+                    <span class="time-badge">Sắp tới: Tháng 7/2026</span>
+                    <h3>Hà Nội & Hobby Horizon</h3>
+                    <p>Kế hoạch chuyến đi 6 ngày khám phá thủ đô và bùng nổ đam mê 2D, Miku Figure tại sự kiện Hobby Horizon tiếp theo.</p>
+                </div>
             </div>
-            <div class="skill-category glass-panel">
-                <h3>Lập Trình</h3>
-                <p>HTML5, CSS3, JavaScript, Web Responsive</p>
-                <div class="bar-minimal"><div class="fill-minimal accent-bar" style="width: 80%;"></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-cta container">
-        <div class="cta-box glass-card accent-border">
-            <h2>Sẵn Sàng Hợp Tác?</h2>
-            <p>Nếu bạn cần một giải pháp kết hợp giữa kỹ thuật và thẩm mỹ, hãy để lại lời nhắn.</p>
-            <a href="mailto:viet47794@gmail.com" class="btn-primary large-btn">Gửi Email</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-minimal container">
-            <p class="foot-left">© 2026 Nguyễn Quốc Việt. Made with passion & AI.</p>
-            <div class="foot-right">
-                <a href="#about">About</a>
-                <a href="#portfolio">Projects</a>
-                <a href="mailto:viet47794@gmail.com">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
