@@ -3,12 +3,12 @@
 Đây là mã nguồn dự án  được thực hiện cho đồ án môn học tại Đại học Gia Định (GDU).
 
 ## 🌍 Link Demo (Trang web sản phẩm)
-[Chèn link Vercel/Github Pages của bạn vào đây]
+ https://viet47794-cell.github.io/nguyen-quoc-viet/
 
 ## 👨‍💻 Thông tin sinh viên
-* **Họ và tên:** [Tên của bạn]
-* **Mã sinh viên:** [Mã SV của bạn]
-* **Lớp / Khóa:** [Tên lớp]
+* **Họ và tên:** Nguyễn Quốc Việt
+* **Mã sinh viên:** 24150586
+* **Lớp / Khóa:** 241552
 
 ## 🛠 Công nghệ sử dụng
 * **Thiết kế:** Figma, Adobe Photoshop
@@ -16,9 +16,4 @@
 * **Backend:** [Node.js / PHP / Không có]
 * **Công cụ:** Visual Studio Code, Git
 
-## 🚀 Hướng dẫn cài đặt và chạy dự án (Local)
-Nếu giảng viên muốn chạy dự án này trên máy cá nhân, vui lòng làm theo các bước sau:
 
-1. Clone repository này về máy:
-   ```bash
-   git clone [https://github.com/ten-tai-khoan/ten-du-an.git](https://github.com/ten-tai-khoan/ten-du-an.git)
