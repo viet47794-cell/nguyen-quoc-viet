@@ -1,6 +1,6 @@
 # portilo
 
-Đây là mã nguồn dự án  được thực hiện cho đồ án môn học tại Đại học Gia Định (GDU).
+Đây là mã nguồn dự án portilo được thực hiện cho đồ án môn học tại Đại học Gia Định (GDU).
 
 ## 🌍 Link Demo (Trang web sản phẩm)
  https://viet47794-cell.github.io/nguyen-quoc-viet/
