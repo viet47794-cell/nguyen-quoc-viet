@@ -48,10 +48,10 @@ nav {
 .nav-brand .title { font-size: 1.1rem; color: var(--nav-text); margin-top: 5px; }
 
 .nav-links { display: flex; gap: 20px; margin-bottom: 25px; }
-.nav-links a { text-decoration: none; color: var(--nav-text); font-size: 1.1rem; font-weight: 500; }
+.nav-links a { text-decoration: none; color: var(--nav-text); font-size: 1.1rem; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--text-main); }
 
-/* Nút toggle giống hệt thầy (vuông bo góc) */
+/* Nút toggle (vuông bo góc) */
 .theme-btn {
     width: 45px; height: 45px;
     background: transparent;
@@ -79,13 +79,77 @@ nav {
 .stat-card h2 { font-size: 3.5rem; font-weight: 400; margin-bottom: 10px; line-height: 1; }
 .stat-card p { font-size: 1.1rem; color: var(--text-muted); }
 
-/* Projects / Content */
+/* Projects & Content chung */
 .content-section { max-width: 800px; margin: 0 auto; padding: 20px 5% 60px; }
 .project-item { background-color: var(--card-bg); padding: 30px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
 .project-item h3 { font-size: 1.5rem; margin-bottom: 10px; }
 .project-item p { color: var(--text-muted); font-size: 1.1rem; }
 
-/* Contact Section (Chính xác y hệt ảnh) */
+/* =========================================
+   SKILLS ACCORDION (Hiệu ứng bấm mở)
+   ========================================= */
+.skill-accordion {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.accordion-btn {
+    background-color: transparent;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-btn::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.accordion-btn.active::after {
+    content: '−';
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: var(--card-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out, padding 0.35s ease;
+}
+
+.accordion-content.show {
+    padding: 0 20px 20px;
+    max-height: 200px;
+}
+
+.accordion-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+/* Contact Section */
 .contact-section { max-width: 800px; margin: 0 auto; padding: 0 5% 60px; }
 .contact-box { background-color: var(--card-bg); border-radius: 30px; padding: 40px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid var(--border-color); }
 .contact-box h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; text-align: left; }
@@ -96,5 +160,5 @@ nav {
 /* Footer */
 footer { max-width: 800px; margin: 0 auto; padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); font-size: 1rem; color: var(--text-muted); flex-wrap: wrap; gap: 20px; }
 .footer-right { display: flex; gap: 20px; }
-.footer-right a { text-decoration: none; color: var(--text-muted); }
+.footer-right a { text-decoration: none; color: var(--text-muted); transition: 0.2s; }
 .footer-right a:hover { color: var(--text-main); }
