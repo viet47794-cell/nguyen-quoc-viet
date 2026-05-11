@@ -1,56 +1,106 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Quốc Việt - Creative Designer & IT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body data-theme="light">
-
-    <nav>
-        <div class="nav-brand">
-            <span class="name">NGUYỄN QUỐC VIỆT</span>
-            <span class="title">IT & Graphic Design Student</span>
-        </div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <button id="theme-toggle" class="theme-btn">☀️</button>
-    </nav>
-
-    <header class="hero">
-        <h1 class="hero-name">Nguyễn Quốc<br>Việt</h1>
-        <p class="hero-desc">Building optimal digital experiences at the intersection of IT and Graphic Design. Gia Dinh University (GDU).</p>
-        
-        <div class="tags-bubble">
-            <span class="bubble">Graphic Design</span>
-            <span class="bubble">Web Dev</span>
-            <span class="bubble">Photography</span>
-        </div>
-
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h2>11k5</h2>
-                <p>maimai DX<br>Rating</p>
-            </div>
-            <div class="stat-card">
-                <h2>2</h2>
-                <p>Core<br>Majors</p>
-            </div>
-        </div>
-    </header>
-
-    <section id="projects" class="content-section">
+<section id="skills" class="content-section">
         <div class="section-container">
-            <div class="project-item">
-                <h3>Visual Identity System</h3>
-                <p>Hệ thống nhận diện thương hiệu cá nhân phong cách hiện đại. Sử dụng Adobe Photoshop và Illustrator để tối ưu hóa hình ảnh.</p>
+            <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Kỹ Năng & Đam Mê</h2>
+
+            <div class="skill-accordion">
+                <button class="accordion-btn">🎨 Graphic Design</button>
+                <div class="accordion-content">
+                    <p>Sử dụng thành thạo Adobe Photoshop, Illustrator và Figma cho thiết kế UI/UX và hệ thống nhận diện thương hiệu.</p>
+                </div>
             </div>
-            
-            <div class="project-item">
-                <h3>Photography Collection</h3>
-                <p>Sáng tác ảnh chân dung và tĩnh vật. Thực hiện hoàn toàn bằng máy ảnh Canon EOS 1200D cùng ống kính Tamron 18
+
+            <div class="skill-accordion">
+                <button class="accordion-btn">💻 Web Development</button>
+                <div class="accordion-content">
+                    <p>Lập trình Frontend với HTML, CSS, JavaScript trên môi trường Visual Studio Code. Tập trung vào Responsive Web Design.</p>
+                </div>
+            </div>
+
+            <div class="skill-accordion">
+                <button class="accordion-btn">📸 Photography</button>
+                <div class="accordion-content">
+                    <p>Chụp ảnh chân dung và tĩnh vật bằng máy ảnh Canon EOS 1200D cùng ống kính Tamron 18-200mm Non-VC.</p>
+                </div>
+            </div>
+
+            <div class="skill-accordion">
+                <button class="accordion-btn">🕹️ Rhythm Games Reflex</button>
+                <div class="accordion-content">
+                    <p>Người chơi maimai DX với rating 11,500 (144 credits). Trò chơi giúp rèn luyện phản xạ, tư duy nhịp độ và khả năng tập trung cao độ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+    ```
+
+### 2. File `style.css` (Thêm CSS cho hiệu ứng bấm trượt xuống)
+Kéo xuống cuối cùng của file `style.css`, dán thêm đoạn này vào để làm đẹp cái thanh bấm:
+
+```css
+/* =========================================
+   SKILLS ACCORDION (Hiệu ứng bấm mở)
+   ========================================= */
+.skill-accordion {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.accordion-btn {
+    background-color: transparent;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dấu cộng/trừ bên phải */
+.accordion-btn::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.accordion-btn.active::after {
+    content: '−';
+}
+
+/* Nội dung ẩn bên trong */
+.accordion-content {
+    padding: 0 20px;
+    background-color: var(--card-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out, padding 0.35s ease;
+}
+
+.accordion-content.show {
+    padding: 0 20px 20px;
+    max-height: 200px; /* Đủ không gian để chữ trượt xuống */
+}
+
+.accordion-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
