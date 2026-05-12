@@ -24,7 +24,7 @@
 
 Tên: Nguyễn Quốc Việt.
 
-Định vị: Sinh viên năm 2 ngành Công nghệ Thông tin và Thiết kế Đồ họa tại Đại học Gia Định (GDU).
+Trình độ học vấn: Sinh viên năm 2 ngành Công nghệ Thông tin và Thiết kế Đồ họa tại Đại học Gia Định (GDU).
 
 Đặc điểm nổi bật: Kết hợp tư duy logic lập trình và thẩm mỹ thiết kế.
 
