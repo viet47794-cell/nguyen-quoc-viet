@@ -28,7 +28,7 @@ Trình độ học vấn: Sinh viên năm 2 ngành Công nghệ Thông tin và T
 
 Đặc điểm nổi bật: Kết hợp tư duy logic lập trình và thẩm mỹ thiết kế.
 
-Năng lực/Sở thích: Nhiếp ảnh (Sử dụng máy Canon EOS 1200D), thao tác phản xạ nhịp độ cao (maimai DX - rating 11,500).
+Năng lực/Sở thích: Nhiếp ảnh (Sử dụng máy Canon EOS 1200D), thao tác phản xạ nhịp độ cao (maimai DX - rating 12443).
 
 2. Cấu trúc UI & Bố cục (Layout):
 
